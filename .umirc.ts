@@ -6,8 +6,16 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
+  qiankun: {
+    slave: {},
+  },
+  reactQuery: {},
   layout: {
     title: '@umijs/max',
+    layout: 'sidemenu',
+    contentWidth: 'Fluid',
+    fixedHeader: false,
+    fixSiderbar: false,
   },
   routes: [
     {
@@ -18,6 +26,11 @@ export default defineConfig({
       name: '首页',
       path: '/home',
       component: './Home',
+    },
+    {
+      name: 'React Query Demo',
+      path: '/react-query',
+      component: './ReactQuery',
     },
     {
       name: '权限演示',
