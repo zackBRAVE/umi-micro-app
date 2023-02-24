@@ -20,6 +20,7 @@ export const layout = () => {
 type Props = {
   message: string;
   testFunc: (msg: string) => void;
+  opts: any;
 };
 
 export const qiankun = {
@@ -27,7 +28,6 @@ export const qiankun = {
   async bootstrap(props: Props) {
     if (!props) return;
     console.log('[umi] bootstrap', props);
-    props.testFunc('[umi] ' + props.message);
   },
   // 应用 render 之前触发
   async mount(props: Props) {
@@ -41,5 +41,5 @@ export const qiankun = {
 };
 
 export const request: RequestConfig = {
-  baseURL: 'http://localhost:8000',
+  baseURL: process.env.BASE_URL,
 };

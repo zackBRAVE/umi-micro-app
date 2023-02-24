@@ -5,7 +5,7 @@ function emptyAction() {
 
 class Actions {
   // 默认值为空 Action
-  actions: {
+  actions: Record<string, any> & {
     onGlobalStateChange: (...args: any) => void;
     setGlobalState: (...args: any) => void;
   } = {
@@ -18,6 +18,10 @@ class Actions {
    */
   setActions(actions: any) {
     this.actions = actions;
+  }
+
+  getState() {
+    return this.actions;
   }
 
   /**

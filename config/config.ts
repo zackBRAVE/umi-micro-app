@@ -11,7 +11,7 @@ export default defineConfig({
   },
   reactQuery: {},
   layout: {
-    title: '@umijs/max',
+    title: 'SeaInsure',
     layout: 'sidemenu',
     contentWidth: 'Fluid',
     fixedHeader: false,
@@ -41,6 +41,16 @@ export default defineConfig({
       name: 'CRUD 示例',
       path: '/table',
       component: './Table',
+    },
+    {
+      name: 'Policy',
+      path: '/policy',
+      component: './Policy',
+    },
+    {
+      name: 'Quote',
+      path: '/pa/quote/continue/:itntCode/:prdtCode/:productVersion/:bizType/:policyId',
+      component: './Quote',
     },
   ],
   npmClient: 'pnpm',

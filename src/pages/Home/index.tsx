@@ -1,4 +1,5 @@
 import Guide from '@/components/Guide';
+import { LinkMain } from '@/components/LinkMain';
 import { trim } from '@/utils/format';
 import { PageContainer } from '@ant-design/pro-components';
 import { useModel } from '@umijs/max';
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
     <PageContainer ghost>
       <div className={styles.container}>
         <Guide name={trim(name)} />
+        <LinkMain to="/">Home</LinkMain>
       </div>
     </PageContainer>
   );
